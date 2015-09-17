@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript ODD, Even and Prime Number</title>
+    </head>
+    <body>
+
+       <input type="search" id="get_input" value="" placeholder="Search Your Name"> 
+       <button type="button" onclick="search()">Search</button>
+
+       <button onclick="reload_page()">Reload Page</button>
+
+        
+        <p id="result"></p>
+
+
+     <script type="text/javascript">
+     function search(){
+     	var data = ["Today", "Thursday", "Tasfir", "Hossain", "Suman", "Shuvo", "Mehedi", 1, 2, 3, 4, 5,];
+
+     	var search_data = document.getElementById("get_input").value;
+
+     	for(var i = 0; i <= data.length; i++){
+             
+          if(search_data == data[i]){
+     
+              document.getElementById("result").innerHTML = "We Find The Name " + search_data;
+              return;
+          }else{
+     
+               document.getElementById("result").innerHTML = "Sorry Couldn't Find Your Query";
+          }
+          }
+    }
+
+     function reload_page(){
+     	location.reload();
+     }
+     </script>   
+
+    </body>
+</html>

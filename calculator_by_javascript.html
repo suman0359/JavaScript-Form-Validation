@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>JavaScript Calculator</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	
+    <section class="calculator">
+        <div class="calculator-title text-center">
+            <h2>JavaScript Calculator</h2>
+        </div>
+        <div class="calculator-box">
+
+          <div class="result-display">
+            <div class="form-group">
+              <input type="text" id="display-input"  class="form-control display-input text-right">
+            </div>
+            <div class="form-group">
+              <input type="text" id="final_result" class="form-control result-calculation text-right" value="0.00">
+            </div>
+          </div>
+
+          <div class="button-wrapper">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="button-group">
+                  <button class="btn btn-primary" onclick="button_seven()">7</button>
+                  <button class="btn btn-primary" onclick="button_eight()">8</button>
+                  <button class="btn btn-primary" onclick="button_nine()">9</button>
+                  <button class="btn btn-primary" onclick="button_divide()">/</button>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="button-group">
+                  <button class="btn btn-primary" onclick="button_four()">4</button>
+                  <button class="btn btn-primary" onclick="button_five()">5</button>
+                  <button class="btn btn-primary" onclick="button_six()">6</button>
+                  <button class="btn btn-primary" onclick="button_multiply()">*</button>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="button-group">
+                  <button class="btn btn-primary" name="button-one" onclick="button_one()">1</button>
+                  <button class="btn btn-primary" name="button-two" onclick="button_two()">2</button>
+                  <button class="btn btn-primary" name="button-three" onclick="button_three()">3</button>
+                  <button class="btn btn-primary" name="button-minuse" onclick="button_minus()">-</button>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="button-group">
+                  <button class="btn btn-primary" onclick="button_zero()">0</button>
+                  <button class="btn btn-primary" onclick="button_dzero()">00</button>
+                  <button class="btn btn-primary" onclick="button_point()">.</button>
+                  <button class="btn btn-primary" onclick="button_add()">+</button>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="button-group last-row">
+                  <button class="btn btn-primary" onclick="button_clear()">Clear All</button>
+                  <button class="btn btn-primary" onclick="button_equal()">=</button>
+                </div>
+              </div>
+             
+          </div>
+        </div>
+    </section>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js" type="text/javascript"></script>
+  </body>
+</html>

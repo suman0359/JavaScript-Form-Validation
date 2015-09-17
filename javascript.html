@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript ODD, Even and Prime Number</title>
+    </head>
+    <body>
+
+        <button onclick="number_type()">Get Your Input Type</button>
+
+        <button onclick="get_your_all_even_number()">Get Your All Even Number</button>
+
+        <button onclick="check_prime_number()">Check Prime Number</button>
+
+        <button onclick="reload_func()">Reload Page</button>
+
+
+
+        <p id="number"></p>
+        <p id="check_prime_number"></p>
+
+        <script>
+            function number_type() {
+                var input_n = prompt("Please Input Your Number : ");
+
+                var n = parseInt(input_n);
+                if (n % 2 == 0) {
+                    var result = n + " is an Even Number";
+                } else {
+                    var result = n + " is an Odd Number";
+                }
+                ;
+                var result = document.getElementById('number').innerHTML = result;
+                return result;
+            }
+
+            function get_your_all_even_number() {
+                var input_n = prompt("Please Input Your Number : ");
+
+                var n = parseInt(input_n);
+
+                if (n < 1) {
+                    alert("Invalid Input");
+                    //break;
+                }
+                ;
+
+                for (i = 1; i <= n; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        var x = document.createElement("P");
+                        var t = document.createTextNode("Here " + i + " is Even number");
+                        x.appendChild(t);
+                        document.body.appendChild(x);
+
+                        //document.write("Here " + i+" is Even number"+",<br/>");
+                    }
+                }
+
+            }
+
+            function check_prime_number() {
+                var input_n = prompt("Please Input Your Number : ");
+
+                var n = parseInt(input_n);
+
+                for (var i = 2; i < n; i++) {
+                    if (n % i == 0) {
+                        var check = true;
+                    }
+                }
+                if (check == true) {
+                    var result = n + " is Not a Prime Number";
+
+                    var result = document.getElementById('number').innerHTML = result;
+                    return result;
+                } else {
+                    var result = n + " is a Prime Number";
+
+                    var result = document.getElementById('number').innerHTML = result;
+                    return result;
+                }
+            }
+
+            function reload_func() {
+                location.reload();
+            }
+        </script>
+
+    </body>
+</html>
